@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>MACHAD’S Logistics Express LLC | Reliable Transportation</title>
+
+ <meta name="description" content="MACHAD’S Logistics Express LLC provides reliable freight transportation and expedited cargo van services across the United States.">
+
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ html {
+ scroll-behavior: smooth;
+ }
+
+ body {
+ font-family: Arial, Helvetica, sans-serif;
+ color: #172033;
+ background: #ffffff;
+ line-height: 1.6;
+ }
+
+ a {
+ text-decoration: none;
+ color: inherit;
+ }
+
+ .container {
+ width: 90%;
+ max-width: 1150px;
+ margin: auto;
+ }
+
+ /* HEADER */
+
+ header {
+ background: #ffffff;
+ border-bottom: 1px solid #e7e7e7;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+
+ .nav {
+ min-height: 78px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 30px;
+ }
+
+ .logo {
+ font-size: 22px;
+ font-weight: 800;
+ letter-spacing: 0.5px;
+ color: #14213d;
+ }
+
+ .logo span {
+ display: block;
+ font-size: 11px;
+ letter-spacing: 2px;
+ color: #b8860b;
+ margin-top: -3px;
+ }
+
+ nav {
+ display: flex;
+ gap: 28px;
+ align-items: center;
+ }
+
+ nav a {
+ font-size: 14px;
+ font-weight: 600;
+ color: #333b4f;
+ }
+
+ nav a:hover {
+ color: #b8860b;
+ }
+
+ .nav-button {
+ background: #14213d;
+ color: white !important;
+ padding: 11px 18px;
+ border-radius: 5px;
+ }
+
+ .nav-button:hover {
+ background: #25395f;
+ }
+
+ /* HERO */
+
+ .hero {
+ min-height: 620px;
+ display: flex;
+ align-items: center;
+ background:
+ linear-gradient(
+ 90deg,
+ rgba(10, 24, 45, 0.96) 0%,
+ rgba(10, 24, 45, 0.82) 48%,
+ rgba(10, 24, 45, 0.48) 100%
+ ),
+ linear-gradient(135deg, #172a46, #40546e);
+ color: white;
+ }
+
+ .hero-content {
+ max-width: 720px;
+ padding: 80px 0;
+ }
+
+ .eyebrow {
+ color: #e1b84b;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ font-size: 13px;
+ font-weight: bold;
+ margin-bottom: 18px;
+ }
+
+ .hero h1 {
+ font-size: clamp(42px, 6vw, 70px);
+ line-height: 1.05;
+ margin-bottom: 25px;
+ }
+
+ .hero p {
+ font-size: 20px;
+ max-width: 620px;
+ color: #e8edf5;
+ margin-bottom: 35px;
+ }
+
+ .buttons {
+ display: flex;
+ gap: 15px;
+ flex-wrap: wrap;
+ }
+
+ .button {
+ display: inline-block;
+ padding: 14px 24px;
+ border-radius: 5px;
+ font-weight: bold;
+ }
+
+ .button-primary {
+ background: #d3a72c;
+ color: #14213d;
+ }
+
+ .button-primary:hover {
+ background: #e2bb50;
+ }
+
+ .button-outline {
+ border: 1px solid rgba(255,255,255,0.6);
+ color: white;
+ }
+
+ .button-outline:hover {
+ background: rgba(255,255,255,0.1);
+ }
+
+ /* INTRO */
+
+ .intro {
+ padding: 85px 0;
+ text-align: center;
+ }
+
+ .section-label {
+ color: #b8860b;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 12px;
+ font-weight: bold;
+ margin-bottom: 12px;
+ }
+
+ .intro h2,
+ .section-heading h2 {
+ font-size: 38px;
+ color: #14213d;
+ margin-bottom: 18px;
+ }
+
+ .intro p {
+ max-width: 750px;
+ margin: auto;
+ color: #626b7a;
+ font-size: 17px;
+ }
+
+ /* SERVICES */
+
+ .services {
+ background: #f6f7f9;
+ padding: 85px 0;
+ }
+
+ .section-heading {
+ text-align: center;
+ margin-bottom: 50px;
+ }
+
+ .section-heading p {
+ color: #697383;
+ }
+
+ .cards {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 25px;
+ }
+
+ .card {
+ background: white;
+ padding: 35px;
+ border: 1px solid #e6e8ec;
+ border-radius: 8px;
+ transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 12px 30px rgba(20, 33, 61, 0.08);
+ }
+
+ .card-number {
+ font-size: 13px;
+ font-weight: bold;
+ color: #b8860b;
+ letter-spacing: 2px;
+ margin-bottom: 18px;
+ }
+
+ .card h3 {
+ font-size: 22px;
+ color: #14213d;
+ margin-bottom: 12px;
+ }
+
+ .card p {
+ color: #687181;
+ }
+
+ /* ABOUT */
+
+ .about {
+ padding: 90px 0;
+ }
+
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 70px;
+ align-items: center;
+ }
+
+ .about h2 {
+ font-size: 38px;
+ color: #14213d;
+ margin-bottom: 20px;
+ }
+
+ .about p {
+ color: #626b7a;
+ margin-bottom: 18px;
+ }
+
+ .values {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 15px;
+ }
+
+ .value {
+ padding: 22px;
+ background: #f6f7f9;
+ border-left: 3px solid #d3a72c;
+ }
+
+ .value strong {
+ display: block;
+ color: #14213d;
+ margin-bottom: 5px;
+ }
+
+ .value span {
+ font-size: 14px;
+ color: #697383;
+ }
+
+ /* COVERAGE */
+
+ .coverage {
+ padding: 90px 0;
+ background: #14213d;
+ color: white;
+ text-align: center;
+ }
+
+ .coverage h2 {
+ font-size: 40px;
+ margin-bottom: 18px;
+ }
+
+ .coverage p {
+ max-width: 680px;
+ margin: auto;
+ color: #d8dfeb;
+ }
+
+ .coverage-boxes {
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ margin-top: 45px;
+ flex-wrap: wrap;
+ }
+
+ .coverage-box {
+ min-width: 210px;
+ padding: 25px 35px;
+ border: 1px solid rgba(255,255,255,0.18);
+ border-radius: 6px;
+ }
+
+ .coverage-box strong {
+ display: block;
+ font-size: 20px;
+ color: #e1b84b;
+ margin-bottom: 5px;
+ }
+
+ /* CONTACT */
+
+ .contact {
+ padding: 90px 0;
+ text-align: center;
+ }
+
+ .contact h2 {
+ font-size: 40px;
+ color: #14213d;
+ margin-bottom: 15px;
+ }
+
+ .contact > .container > p {
+ color: #687181;
+ max-width: 650px;
+ margin: 0 auto 35px;
+ }
+
+ .contact-info {
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ flex-wrap: wrap;
+ }
+
+ .contact-item {
+ padding: 18px 28px;
+ border: 1px solid #e2e5ea;
+ border-radius: 6px;
+ min-width: 260px;
+ }
+
+ .contact-item strong {
+ display: block;
+ color: #14213d;
+ margin-bottom: 5px;
+ }
+
+ .contact-item a {
+ color: #566173;
+ }
+
+ .contact-item a:hover {
+ color: #b8860b;
+ }
+
+ /* FOOTER */
+
+ footer {
+ background: #0d1729;
+ color: #b9c2d0;
+ padding: 30px 0;
+ text-align: center;
+ font-size: 13px;
+ }
+
+ footer strong {
+ color: white;
+ }
+
+ /* MOBILE */
+
+ @media (max-width: 800px) {
+
+ .nav {
+ padding: 15px 0;
+ flex-direction: column;
+ }
+
+ nav {
+ gap: 15px;
+ flex-wrap: wrap;
+ justify-content: center;
+ }
+
+ .hero {
+ min-height: 560px;
+ }
+
+ .hero h1 {
+ font-size: 44px;
+ }
+
+ .hero p {
+ font-size: 17px;
+ }
+
+ .cards {
+ grid-template-columns: 1fr;
+ }
+
+ .about-grid {
+ grid-template-columns: 1fr;
+ gap: 40px;
+ }
+
+ .intro h2,
+ .section-heading h2,
+ .about h2,
+ .contact h2 {
+ font-size: 32px;
+ }
+
+ .values {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+</head>
+
+<body>
+
+ <!-- HEADER -->
+
+ <header>
+ <div class="container nav">
+
+ <a href="#home" class="logo">
+ MACHAD’S
+ <span>LOGISTICS EXPRESS LLC</span>
+ </a>
+
+ <nav>
+ <a href="#about">About</a>
+ <a href="#services">Services</a>
+ <a href="#coverage">Coverage</a>
+ <a href="#contact" class="nav-button">Contact</a>
+ </nav>
+
+ </div>
+ </header>
+
+
+ <!-- HERO -->
+
+ <section class="hero" id="home">
+
+ <div class="container">
+
+ <div class="hero-content">
+
+ <div class="eyebrow">
+ Reliable Transportation
+ </div>
+
+ <h1>
+ Moving Freight.<br>
+ Delivering Trust.
+ </h1>
+
+ <p>
+ Professional freight transportation and expedited
+ cargo van services focused on reliability, safety,
+ and dependable service.
+ </p>
+
+ <div class="buttons">
+
+ <a href="#contact" class="button button-primary">
+ Contact Us
+ </a>
+
+ <a href="#services" class="button button-outline">
+ Our Services
+ </a>
+
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+ <!-- INTRO -->
+
+ <section class="intro">
+
+ <div class="container">
+
+ <div class="section-label">
+ MACHAD’S LOGISTICS
+ </div>
+
+ <h2>
+ Transportation You Can Rely On
+ </h2>
+
+ <p>
+ We provide professional transportation solutions
+ for businesses that value dependable service,
+ careful handling, and on-time deliveries.
+ </p>
+
+ </div>
+
+ </section>
+
+
+ <!-- SERVICES -->
+
+ <section class="services" id="services">
+
+ <div class="container">
+
+ <div class="section-heading">
+
+ <div class="section-label">
+ What We Do
+ </div>
+
+ <h2>
+ Our Services
+ </h2>
+
+ <p>
+ Flexible transportation solutions designed
+ around the needs of our customers and partners.
+ </p>
+
+ </div>
+
+
+ <div class="cards">
+
+ <div class="card">
+
+ <div class="card-number">
+ 01
+ </div>
+
+ <h3>
+ General Freight
+ </h3>
+
+ <p>
+ Reliable transportation for general freight
+ with attention to proper handling and
+ dependable delivery.
+ </p>
+
+ </div>
+
+
+ <div class="card">
+
+ <div class="card-number">
+ 02
+ </div>
+
+ <h3>
+ Expedited Transportation
+ </h3>
+
+ <p>
+ Time-sensitive transportation solutions
+ for shipments that require dependable
+ and responsive service.
+ </p>
+
+ </div>
+
+
+ <div class="card">
+
+ <div class="card-number">
+ 03
+ </div>
+
+ <h3>
+ Cargo Van Transportation
+ </h3>
+
+ <p>
+ Flexible cargo van transportation for
+ shipments that require efficiency,
+ mobility, and careful handling.
+ </p>
+
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+ <!-- ABOUT -->
+
+ <section class="about" id="about">
+
+ <div class="container about-grid">
+
+ <div>
+
+ <div class="section-label">
+ About Us
+ </div>
+
+ <h2>
+ Built on Reliability and Responsibility
+ </h2>
+
+ <p>
+ MACHAD’S Logistics Express LLC is focused on
+ providing professional transportation services
+ with consistency, care, and respect for every
+ shipment we handle.
+ </p>
+
+ <p>
+ Our goal is simple: to be a transportation
+ partner that customers and logistics professionals
+ can rely on.
+ </p>
+
+ </div>
+
+
+ <div class="values">
+
+ <div class="value">
+ <strong>Reliable Service</strong>
+ <span>We take commitments seriously.</span>
+ </div>
+
+ <div class="value">
+ <strong>Safety Focused</strong>
+ <span>Safety comes first on every trip.</span>
+ </div>
+
+ <div class="value">
+ <strong>Professional</strong>
+ <span>Clear communication and responsible service.</span>
+ </div>
+
+ <div class="value">
+ <strong>On-Time Delivery</strong>
+ <span>We understand the importance of time.</span>
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+ <!-- COVERAGE -->
+
+ <section class="coverage" id="coverage">
+
+ <div class="container">
+
+ <div class="section-label">
+ Service Area
+ </div>
+
+ <h2>
+ OTR & Regional Transportation
+ </h2>
+
+ <p>
+ Serving transportation needs across the
+ contiguous United States with flexible
+ regional and over-the-road operations.
+ </p>
+
+
+ <div class="coverage-boxes">
+
+ <div class="coverage-box">
+
+ <strong>48</strong>
+
+ <span>
+ Contiguous States
+ </span>
+
+ </div>
+
+
+ <div class="coverage-box">
+
+ <strong>OTR</strong>
+
+ <span>
+ Over-the-Road
+ </span>
+
+ </div>
+
+
+ <div class="coverage-box">
+
+ <strong>Regional</strong>
+
+ <span>
+ Flexible Coverage
+ </span>
+
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+ <!-- CONTACT -->
+
+ <section class="contact" id="contact">
+
+ <div class="container">
+
+ <div class="section-label">
+ Get In Touch
+ </div>
+
+ <h2>
+ Let's Work Together
+ </h2>
+
+ <p>
+ For transportation inquiries or partnership
+ opportunities, contact MACHAD’S Logistics Express LLC.
+ </p>
+
+
+ <div class="contact-info">
+
+ <div class="contact-item">
+
+ <strong>Phone</strong>
+
+ <a href="tel:+15085138084">
+ 508-513-8084
+ </a>
+
+ </div>
+
+
+ <div class="contact-item">
+
+ <strong>Email</strong>
+
+ <a href="mailto:machadslogusa@gmail.com">
+ machadslogusa@gmail.com
+ </a>
+
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+ <!-- FOOTER -->
+
+ <footer>
+
+ <div class="container">
+
+ <p>
+ © 2026 <strong>MACHAD’S Logistics Express LLC</strong>.
+ All rights reserved.
+ </p>
+
+ </div>
+
+ </footer>
+
+</body>
+</html>
